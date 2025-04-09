@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Order - Don'O Donut</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Don'O Donut</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="order.html">Order</a>
+      <a href="contact.html">Contact</a>
+      <a href="admin.html" class="admin-icon">👤</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="form-container">
+      <h2>Your Cart</h2>
+      <div id="cart-list" class="cart-display"></div>
+
+      <h2>Complete Your Order</h2>
+      <form onsubmit="submitOrder(event)">
+        <input type="text" id="customer-name" placeholder="Full Name" required />
+        <input type="text" id="customer-address" placeholder="Address" required />
+        <input type="tel" id="customer-phone" placeholder="Phone Number" required />
+        <button type="submit">Submit Order</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Don'O Donut. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    renderCart("cart-list", true);
+  </script>
+</body>
+</html>
